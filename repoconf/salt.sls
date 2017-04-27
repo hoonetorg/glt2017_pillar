@@ -1,0 +1,13 @@
+repoconf:
+  yum:
+    yumreposfile:
+      salt:
+        contents: |
+          [saltstack]
+          name=SaltStack latest Release Channel for RHEL/CentOS $releasever
+          baseurl=https://repo.saltstack.com/yum/redhat/$releasever/$basearch/latest/
+          skip_if_unavailable=True
+          gpgcheck=1
+          gpgkey=https://repo.saltstack.com/yum/redhat/$releasever/$basearch/latest/SALTSTACK-GPG-KEY.pub
+          enabled=1
+          enabled_metadata=1
