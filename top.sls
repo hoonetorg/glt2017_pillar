@@ -1,14 +1,13 @@
 glt2017:
   '*':
     - match: compound
-    - chrony.client
     - repoconf.salt
     - hosts
 
   'salt*':
     - match: compound
     - salt.master
-    - serverpackages.install
+    - serverpackages.salt
     - firewalld.disable
     - pcs.clustermap
     - mysql.clustermap

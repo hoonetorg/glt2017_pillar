@@ -32,7 +32,7 @@ serverpackages:
       #- tree
       #- unzip
       #- usbutils
-      #- vim-enhanced
+      - vim-enhanced
       #- wget
       #- yum-utils
       #- zip
