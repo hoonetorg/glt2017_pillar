@@ -33,6 +33,23 @@ mysql:
       log: {{log}}
       socket: {{sock}}
       pid: {{pid}}
+      constraints:
+        colocation-vip_galera-galera-master-INFINITY:
+          constraint_options:
+          - add
+          - vip_galera
+          - with
+          - galera-master
+          constraint_type: colocation
+        order-galera-master-vip_galera-Mandatory:
+          constraint_options:
+          - promote
+          - galera-master
+          - then
+          - start
+          - vip_galera
+          - kind=Mandatory
+          constraint_type: order
 
     #mariadb_galera:
     pxc:

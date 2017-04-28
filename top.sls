@@ -15,9 +15,9 @@ glt2017:
   'db*':
     - match: compound
     - repoconf.percona
-    - salt.minion
     - serverpackages.db
     - firewalld.disable
     - pcs.clustermap
     - pcs
+    - pcs.galeraip
     - mysql
