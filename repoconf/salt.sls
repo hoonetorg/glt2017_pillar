@@ -1,7 +1,7 @@
 repoconf:
   yum:
     yumreposfile:
-      salt:
+      saltstack:
         contents: |
           [saltstack]
           name=SaltStack latest Release Channel for RHEL/CentOS $releasever
