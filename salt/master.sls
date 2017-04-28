@@ -1,5 +1,7 @@
 salt:
   master:
+    autosign_file: /etc/salt/autosign.conf
+    ipv6: "False"
     worker_threads: 16
     hash_type: sha256
     pillar_roots:
